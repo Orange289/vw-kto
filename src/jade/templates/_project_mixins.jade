@@ -1,0 +1,20 @@
+mixin header
+	header.page_header
+		h1.page_body__title Калькулятор ТО
+
+mixin slider(array)
+	label.form__label(for='#{array.id}') #{array.title}
+	.range__slider(class='range__slider_#{array.mod}' id='#{array.id_slider}')
+
+mixin table-head(array)
+	table.info__head
+		tr
+			each item in array
+				td(class='#{item.class}')
+					span #{item.text}
+
+mixin info-content(array)
+	each item in array
+		div(class='#{item.class}')
+			span #{item.span}
+			b #{item.text}

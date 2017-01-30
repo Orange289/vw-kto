@@ -1,0 +1,49 @@
+.info
+	.info__items
+		.info__item.info__item_labors
+			a.info__open#openlabors
+				b Регламентные работы
+				span.info__btn
+			.info__content#contentlabors
+				+ table-head(tableHead_1)
+				.info__point
+					+ info-content(info_l_1)
+				.info__point
+					+ info-content(info_l_2)
+				.info__point
+					+ info-content(info_l_3)
+				.info__point
+					+ info-content(info_l_4)
+				.info__result
+					b Стоимость работ, руб.
+					b.info__result-price 2 700,00
+		.info__item.info__item_parts
+			a.info__open#openparts
+				b Запчасти
+				span.info__btn
+			.info__content#contentparts
+				+ table-head(tableHead_2)
+				.info__point
+					+ info-content(info_p_1)
+				.info__result
+					b Стоимость материалов, руб.
+					b.info__result-price 160,00
+		.info__item.info__item_extralabors
+			a.info__open#opena_extralabors
+				b Дополнительные работы
+				span 2 700,00 руб.
+				span.info__btn
+			.info__content#content_extralabors
+		.info__item.info__item_extraparts
+			a.info__open#opena_extraparts
+				b Дополнительные запчасти
+				span 160,00 руб.
+				span.info__btn
+			.info__content#content_extraparts
+	.info__total
+		.info__total-item
+			b.info__total-label Итоговая стоимость ТО, руб.
+			b.info__total-value 20 585,00 руб.
+		.info__total-item.info__total-item_last
+			b.info__total-label Стоимость предыдущих ТО
+			b.info__total-value 135 585,00 руб.

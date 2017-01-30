@@ -1,0 +1,52 @@
+.filters__range {
+	display: none;
+}
+
+.filters__img {
+	position: relative;
+	text-align: center;
+	padding-top: 74px;
+	margin-top: 36px;
+	margin-bottom: 51px;
+
+	img {
+		@include size(296px, 102px);
+		position: relative;
+		z-index: 1;
+	}
+
+	b {
+		font-family: 'vwheadoffice-bold', sans-serif;
+		@include font-param(82px, 62px, 700, #e3ebed);
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		z-index: 0;
+	}
+
+}
+
+
+@media ($wide-widths) {
+
+	.filters {
+		@include clearfix;
+		// padding-bottom: 327px;
+	}
+
+	.filters__left {
+		float: left;
+		margin-right: 92px;
+	}
+
+	.filters__select_mileage {
+		display: none;
+	}
+
+	.filters__img {
+		float: left;
+		margin-top: -13px;
+	}
+
+}

@@ -1,0 +1,40 @@
+.form__label {
+	font-family: 'vwtextoffice-bold';
+	@include font-param(16px, 16px, 700);
+	padding-bottom: 5px;
+}
+
+.form__select {
+	width: 280px !important;
+
+	.chosen-container-single .chosen-single {
+		@include font-param(14px, 16px, 400);
+	}
+
+	.chosen-drop {
+		font-size: 14px;
+	}
+
+}
+
+.form__cell {
+	margin-bottom: 20px;
+}
+
+
+@media ($wide-widths) {
+
+	.form__select {
+		width: 253px !important;
+
+		.chosen-container-single .chosen-single {
+			@include font-param(15px, 16px, 400);
+		}
+
+		.chosen-drop {
+			font-size: 15px;
+		}
+
+	}
+
+}

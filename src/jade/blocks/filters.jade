@@ -1,0 +1,31 @@
+.filters
+	.filters__left
+		.filters__select.filters__select_model
+			+ form_element({
+				type:'select',
+				class_array: default_select,
+				id:'model',
+				title:'Модель',
+				options:['Tiguan','Tiguan','Tiguan']
+			})
+		.filters__select.filters__select_engine
+			+ form_element({
+				type:'select',
+				class_array: default_select,
+				id:'engine',
+				title:'Двигатель',
+				options:['Бензин 1.4 TSI (90 кВт)','Бензин 1.4 TSI (90 кВт)','Бензин 1.4 TSI (90 кВт)']
+			})
+	.filters__select.filters__select_mileage
+		+ form_element({
+			type:'select',
+			class_array: default_select,
+			id:'mileage',
+			title:'Пробег, км / Срок эксплуатации, лет',
+			options:['15 000 км — 1 год','30 000 км — 2 года','45 000 км — 3 года','60 000 км — 4 года','75 000 км — 5 лет','90 000 км — 6 лет','105 000 км — 7 лет','120 000 км — 8 лет','135 000 км — 9 лет','150 000 км — 10 лет']
+		})
+	.filters__range.range
+		+ slider(arraySlider)
+	.filters__img
+		b Tiguan
+		img(src='img/img-tiguan.png' srcset='img/img-tiguan@2x.png 2x, img/img-tiguan@3x.png 3x')

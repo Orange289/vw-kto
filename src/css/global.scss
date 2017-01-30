@@ -1,0 +1,120 @@
+//fonts
+
+@font-face {
+	@include font-setup($font-fam1, $font-1-local, $font-1-url1, $font-1-url2);
+  font-weight: 400;
+}
+@font-face {
+	@include font-setup($font-fam2, $font-2-local, $font-2-url1, $font-2-url2);
+  font-weight: 700;
+}
+@font-face {
+	@include font-setup($font-fam3, $font-3-local, $font-3-url1, $font-3-url2);
+  font-weight: 400;
+}
+@font-face {
+	@include font-setup($font-fam4, $font-4-local, $font-4-url1, $font-4-url2);
+  font-weight: 700;
+}
+
+//global styles
+
+body {
+	font-family: 'vwtextoffice-regular', sans-serif;
+	@include font-param(15px, 15px, 400);
+	position: relative;
+	background-color: $white;
+	padding: 0;
+	min-width: 320px;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+input,
+select,
+img {
+	outline: none;
+}
+
+dd,
+dl {
+	margin: 0;
+}
+
+
+
+//chosen
+
+.kdxvw-form__row {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.kdxvw-form .chosen-container-single .chosen-single {
+	height: 42px !important;
+}
+
+.chosen-container-single .chosen-single {
+	padding-left: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 4px !important;
+	border: 1px solid #dee1e3 !important;
+}
+
+.kdxvw-form__row b,
+.kdxvw-form .chosen-container-multi .chosen-choices:after,
+.kdxvw-form .kdxvw-check__selected:after {
+	background-image: url('../img/icons/i-arrow-down-select.svg') !important;
+	background-position: 50% 50%;
+	position: absolute;
+	right: 8px !important;
+	transition: 0.3s;
+
+}
+
+.kdxvw-form .chosen-container-multi .chosen-choices:after,
+.kdxvw-form .kdxvw-check__selected:after {
+	right: 16px !important;
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single div b {
+	background-position: 50% 50%;
+	transform: rotate(180deg);
+	transition: 0.3s;
+}
+
+.chosen-drop {
+	border: 1px solid #dee1e3 !important;
+	border-radius: 4px;
+	box-shadow: none !important;
+}
+
+.chosen-container-single .chosen-drop {
+	margin-top: -2px !important;
+	color: $graytext !important;
+}
+
+.chosen-container .chosen-results li {
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
+	padding-left: 15px !important;
+}
+
+.chosen-container .chosen-results {
+	padding: 0;
+}
+
+.chosen-container .chosen-results li.highlighted {
+	background-color: #f3f5f6 !important;
+	color: $graytext;
+	background-image: none;
+}
