@@ -18,7 +18,7 @@ mixin scripts
 	script(src="js/jquery-1.11.1.min.js")
 	script(src="js/jquery-ui.min.js")
 	script(src='js/all/modernizr.js')
-	script(src="js/jquery-ui-slider-pips.js")
+	script(src="js/nouislider.min.js")
 	script(src='js/kdxvw-customscroll.js')
 	script(src='js/kdxvw-chosen.js')
 	script(src='js/kdxvw-maskedinput.min.js')
@@ -61,8 +61,8 @@ mixin form_element(config)
 						span.form__field_file-butt Choose File
 				if config.type === 'select'
 					select(id=config.id class='#{config.class_array.elem_class}' data-placeholder=config.placeholder)
-						each option in config.options
-							option(value=option)= option
+						each o in config.options
+							option(value=o.value)= o.option
 					block
 	if config.type === 'checkbox' || config.type === 'radio'
 		label.form__label(class=config.class_array.label_mod)

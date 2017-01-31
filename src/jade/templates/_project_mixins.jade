@@ -4,7 +4,7 @@ mixin header
 
 mixin slider(array)
 	label.form__label(for='#{array.id}') #{array.title}
-	.range__slider(class='range__slider_#{array.mod}' id='#{array.id_slider}')
+	.range__slider(id='#{array.id}')
 
 mixin table-head(array)
 	table.info__head
