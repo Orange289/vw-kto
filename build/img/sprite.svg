@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="i-arrow-down-select" viewBox="0 0 12 9">
+    <!-- Generator: sketchtool 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>7AFFD479-7C73-4CAF-A13D-4B3E1EB14851</title>
+    <desc>Created with sketchtool.</desc>
+    
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01_5_VW-TO-Step1" transform="translate(-377.000000, -182.000000)" fill="#0099DA">
+            <g id="UI/&#x418;&#x43C;&#x44F;-Component-Copy" transform="translate(151.000000, 165.000000)">
+                <g id="ic/Arrow-down" transform="translate(226.003965, 17.000000)">
+                    <path d="M11.6977978,2.40740741 L6.16628101,8.28148148 C5.9849198,8.47407407 5.62219739,8.47407407 5.44083618,8.28148148 L0.0906806031,2.40740741 C1.36168854e-13,2.31111111 1.36168854e-13,2.21481481 0.0906806031,2.11851852 L1.72293146,0.385185185 C1.81361206,0.288888889 1.90429266,0.288888889 1.99497327,0.385185185 L5.9849198,4.62222222 L9.97486634,0.385185185 C10.0655469,0.288888889 10.1562275,0.288888889 10.2469081,0.385185185 L11.879159,2.11851852 C11.7884784,2.21481481 11.7884784,2.31111111 11.6977978,2.40740741 Z" id="Shape"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</symbol><symbol id="i-arrow-down" viewBox="0 0 15 10">
+    <!-- Generator: sketchtool 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>3DE682FA-2D6E-43FE-A969-83F46778A08A</title>
+    <desc>Created with sketchtool.</desc>
+    
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="02_3_VW-TO-Step2" transform="translate(-179.000000, -557.000000)" fill="#0099DA">
+            <g id="ic/Arrow-right-Copy" transform="translate(186.500000, 562.000000) rotate(90.000000) translate(-186.500000, -562.000000) translate(181.500000, 554.500000)">
+                <path d="M2.73014951,0.108617331 L9.43061423,6.80908205 C9.6503016,7.02876942 9.6503016,7.46814416 9.43061423,7.68783153 L2.73014951,14.3882962 C2.62030583,14.4981399 2.51046214,14.4981399 2.40061846,14.3882962 L0.423432146,12.4111099 C0.313588462,12.3012663 0.313588462,12.1914226 0.423432146,12.0815789 L5.25655424,7.24845679 L0.423432146,2.30549101 C0.313588462,2.30549101 0.313588462,2.19564733 0.423432146,2.08580364 L2.40061846,0.108617331 C2.51046214,-0.0012263531 2.62030583,-0.0012263531 2.73014951,0.108617331 Z" id="Shape"/>
+            </g>
+        </g>
+    </g>
+</symbol><symbol id="i-arrow-right" viewBox="0 0 10 15">
+    <!-- Generator: sketchtool 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>147F7785-CEFD-4CE1-B020-B2DD84984CA9</title>
+    <desc>Created with sketchtool.</desc>
+    
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01_5_VW-TO-Step1" transform="translate(-180.000000, -546.000000)" fill="#0099DA">
+            <g id="ic/Arrow-right-Copy" transform="translate(180.000000, 546.000000)">
+                <path d="M2.73014951,0.108617331 L9.43061423,6.80908205 C9.6503016,7.02876942 9.6503016,7.46814416 9.43061423,7.68783153 L2.73014951,14.3882962 C2.62030583,14.4981399 2.51046214,14.4981399 2.40061846,14.3882962 L0.423432146,12.4111099 C0.313588462,12.3012663 0.313588462,12.1914226 0.423432146,12.0815789 L5.25655424,7.24845679 L0.423432146,2.30549101 C0.313588462,2.30549101 0.313588462,2.19564733 0.423432146,2.08580364 L2.40061846,0.108617331 C2.51046214,-0.0012263531 2.62030583,-0.0012263531 2.73014951,0.108617331 Z" id="Shape"/>
+            </g>
+        </g>
+    </g>
+</symbol></svg>

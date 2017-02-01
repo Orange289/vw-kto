@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>VW - KTO</title>
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="shortcut icon" href="undefined" type="image/x-icon"/>
+    <link rel="icon" href="undefined" type="image/png"/>
+    <link rel="apple-touch-icon" href="undefined"/>
+    <link rel="stylesheet" media="all" href="css/style.css"/>
+  </head>
+  <body class="page_body">
+    <header class="page_header">
+      <h1 class="page_body__title">Калькулятор ТО</h1>
+    </header>
+    <main class="page_main kdxvw-form">
+      <div class="wrapper">
+        <div class="filters">
+          <div class="filters__left">
+            <div class="filters__select filters__select_model">
+              <dl class="form__cell form__cell_filters">
+                <dt class="form__label">
+                  <label for="model">Модель</label>
+                </dt>
+                <dd class="form__field-wrap select_wrap form__select form__select_filters kdxvw-form__row">
+                  <select id="model" data-placeholder="" class="js-kdxvw-chosen">
+                    <option value="Tiguan">Tiguan</option>
+                    <option value="Tiguan">Tiguan</option>
+                    <option value="Tiguan">Tiguan</option>
+                  </select>
+                </dd>
+              </dl>
+            </div>
+            <div class="filters__select filters__select_engine">
+              <dl class="form__cell form__cell_filters">
+                <dt class="form__label">
+                  <label for="engine">Двигатель</label>
+                </dt>
+                <dd class="form__field-wrap select_wrap form__select form__select_filters kdxvw-form__row">
+                  <select id="engine" data-placeholder="" class="js-kdxvw-chosen">
+                    <option value="Бензин 1.4 TSI (90 кВт)">Бензин 1.4 TSI (90 кВт)</option>
+                    <option value="Бензин 1.4 TSI (90 кВт)">Бензин 1.4 TSI (90 кВт)</option>
+                    <option value="Бензин 1.4 TSI (90 кВт)">Бензин 1.4 TSI (90 кВт)</option>
+                  </select>
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <div class="filters__select filters__select_mileage">
+            <dl class="form__cell form__cell_filters">
+              <dt class="form__label">
+                <label for="mileage">Пробег, км / Срок эксплуатации, лет</label>
+              </dt>
+              <dd class="form__field-wrap select_wrap form__select form__select_filters kdxvw-form__row">
+                <select id="mileage" data-placeholder="" class="js-kdxvw-chosen">
+                  <option value="0">15 000 км — 1 год</option>
+                  <option value="1">30 000 км — 2 года</option>
+                  <option value="2">45 000 км — 3 года</option>
+                  <option value="3">60 000 км — 4 года</option>
+                  <option value="4">75 000 км — 5 лет</option>
+                  <option value="5">90 000 км — 6 лет</option>
+                  <option value="6">105 000 км — 7 лет</option>
+                  <option value="7">120 000 км — 8 лет</option>
+                  <option value="8">135 000 км — 9 лет</option>
+                  <option value="9">150 000 км — 10 лет</option>
+                </select>
+              </dd>
+            </dl>
+          </div>
+          <div class="filters__range range">
+            <label for="range_mileage" class="form__label">Выберите пробег или срок эксплуатации</label>
+            <div id="range_mileage" class="range__slider"></div>
+          </div>
+          <div class="filters__img"><b>Tiguan</b><img src="img/img-tiguan.png" srcset="img/img-tiguan@2x.png 2x, img/img-tiguan@3x.png 3x"></div>
+        </div>
+        <div class="info">
+          <div class="info__items">
+            <div class="info__item info__item_labors"><a id="openlabors" class="info__open"><b>Регламентные работы</b><span class="info__btn"></span></a>
+              <div id="contentlabors" class="info__content">
+                <table class="info__head">
+                  <tr>
+                    <td class="info__col info__col_1"><span>Наименование</span></td>
+                    <td class="info__col info__col_2"><span>Норма времени, н/ч</span></td>
+                    <td class="info__col info__col_3"><span>Стоимость н/ч, руб.</span></td>
+                    <td class="info__col info__col_4"><span>Стоимость, руб.</span></td>
+                  </tr>
+                </table>
+                <div class="info__point">
+                  <div class="info__col info__col_1 info__col_name"><span>Базовый инспекционный сервис</span><b>1 350,00</b></div>
+                  <div class="info__col info__col_2 info__col_content"><span>Норма времени, н/ч</span><b>0,9</b></div>
+                  <div class="info__col info__col_3 info__col_content"><span>Стоимость н/ч, руб.</span><b>1 500,00</b></div>
+                  <div class="info__col info__col_4 info__col_content"><span>Стоимость, руб.</span><b>1 350,00</b></div>
+                </div>
+                <div class="info__point">
+                  <div class="info__col info__col_1 info__col_name"><span>Фильтр. элемент воздушного фильтра</span><b>150,00</b></div>
+                  <div class="info__col info__col_2 info__col_content"><span>Норма времени, н/ч</span><b>0,1</b></div>
+                  <div class="info__col info__col_3 info__col_content"><span>Стоимость н/ч, руб.</span><b>1 500,00</b></div>
+                  <div class="info__col info__col_4 info__col_content"><span>Стоимость, руб.</span><b>150,00</b></div>
+                </div>
+                <div class="info__point">
+                  <div class="info__col info__col_1 info__col_name"><span>Фильтр отопителя салона. Снять и установить</span><b>150,00</b></div>
+                  <div class="info__col info__col_2 info__col_content"><span>Норма времени, н/ч</span><b>0,1</b></div>
+                  <div class="info__col info__col_3 info__col_content"><span>Стоимость н/ч, руб.</span><b>1 500,00</b></div>
+                  <div class="info__col info__col_4 info__col_content"><span>Стоимость, руб.</span><b>150,00</b></div>
+                </div>
+                <div class="info__point">
+                  <div class="info__col info__col_1 info__col_name"><span>Свечи зажигания. Снять и установить</span><b>600,00</b></div>
+                  <div class="info__col info__col_2 info__col_content"><span>Норма времени, н/ч</span><b>0,4</b></div>
+                  <div class="info__col info__col_3 info__col_content"><span>Стоимость н/ч, руб.</span><b>1 500,00</b></div>
+                  <div class="info__col info__col_4 info__col_content"><span>Стоимость, руб.</span><b>600,00</b></div>
+                </div>
+                <div class="info__result"><b>Стоимость работ, руб.</b><b class="info__result-price">2 700,00</b></div>
+              </div>
+            </div>
+            <div class="info__item info__item_parts"><a id="openparts" class="info__open"><b>Запчасти</b><span class="info__btn"></span></a>
+              <div id="contentparts" class="info__content">
+                <table class="info__head">
+                  <tr>
+                    <td class="info__col info__col_1"><span>Наименование</span></td>
+                    <td class="info__col info__col_2"><span>Кол-во шт. (л.)</span></td>
+                    <td class="info__col info__col_3"><span>Цена за ед., руб.</span></td>
+                    <td class="info__col info__col_4"><span>Стоимость, руб.</span></td>
+                  </tr>
+                </table>
+                <div class="info__point">
+                  <div class="info__col info__col_1 info__col_name"><span>Пробка сливная масляного поддона картера двигателя с прокладкой</span><b>160,00</b></div>
+                  <div class="info__col info__col_2 info__col_content"><span>Кол-во шт. (л.)</span><b>1</b></div>
+                  <div class="info__col info__col_3 info__col_content"><span>Цена за ед., руб.</span><b>160,00</b></div>
+                  <div class="info__col info__col_4 info__col_content"><span>Стоимость, руб.</span><b>160,00</b></div>
+                </div>
+                <div class="info__result"><b>Стоимость материалов, руб.</b><b class="info__result-price">160,00</b></div>
+              </div>
+            </div>
+            <div class="info__item info__item_extralabors"><a id="opena_extralabors" class="info__open"><b>Дополнительные работы</b><span>2 700,00 руб.</span><span class="info__btn"></span></a>
+              <div id="content_extralabors" class="info__content"></div>
+            </div>
+            <div class="info__item info__item_extraparts"><a id="opena_extraparts" class="info__open"><b>Дополнительные запчасти</b><span>160,00 руб.</span><span class="info__btn"></span></a>
+              <div id="content_extraparts" class="info__content"></div>
+            </div>
+          </div>
+          <div class="info__total">
+            <div class="info__total-item"><b class="info__total-label">Итоговая стоимость ТО, руб.</b><b class="info__total-value">20 585,00 руб.</b></div>
+            <div class="info__total-item info__total-item_last"><b class="info__total-label">Стоимость предыдущих ТО</b><b class="info__total-value">135 585,00 руб.</b></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/all/modernizr.js"></script>
+    <script src="js/jquery-ui-slider-pips.js"></script>
+    <script src="js/kdxvw-customscroll.js"></script>
+    <script src="js/kdxvw-chosen.js"></script>
+    <script src="js/kdxvw-maskedinput.min.js"></script>
+    <script src="js/kdxvw-form.js"></script>
+    <script src="js/all/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
