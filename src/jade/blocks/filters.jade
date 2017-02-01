@@ -22,32 +22,10 @@
 			class_array: default_select,
 			id:'mileage',
 			title:'Пробег, км / Срок эксплуатации, лет',
-			options:[{option:'15 000 км — 1 год',value:'15000.00'},{option:'30 000 км — 2 года',value:'30000.00'},{option:'45 000 км — 3 года',value:'45000.00'},{option:'60 000 км — 4 года',value:'60000.00'},{option:'75 000 км — 5 лет',value:'75000.00'},{option:'90 000 км — 6 лет',value:'90000.00'},{option:'105 000 км — 7 лет',value:'105000.00'},{option:'120 000 км — 8 лет',value:'120000.00'},{option:'135 000 км — 9 лет',value:'135000.00'},{option:'150 000 км — 10 лет',value:'150000.00'}]
+			options:[{option:'15 000 км — 1 год',value:'0'},{option:'30 000 км — 2 года',value:'1'},{option:'45 000 км — 3 года',value:'2'},{option:'60 000 км — 4 года',value:'3'},{option:'75 000 км — 5 лет',value:'4'},{option:'90 000 км — 6 лет',value:'5'},{option:'105 000 км — 7 лет',value:'6'},{option:'120 000 км — 8 лет',value:'7'},{option:'135 000 км — 9 лет',value:'8'},{option:'150 000 км — 10 лет',value:'9'}]
 		})
 	.filters__range.range
 		+ slider(arraySlider)
-		.range__scale.range__scale_year
-			span 1 год
-			span 2 года
-			span 3 года
-			span 4 года
-			span 5 лет
-			span 6 лет
-			span 7 лет
-			span 8 лет
-			span 9 лет
-			span 10 лет
-		.range__scale.range__scale_mileage
-			span 15 000
-			span 30 000
-			span 45 000
-			span 60 000
-			span 75 000
-			span 90 000
-			span 105 000
-			span 120 000
-			span 135 000
-			span 150 000
 	.filters__img
 		b Tiguan
 		img(src='img/img-tiguan.png' srcset='img/img-tiguan@2x.png 2x, img/img-tiguan@3x.png 3x')

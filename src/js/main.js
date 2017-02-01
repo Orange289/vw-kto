@@ -1,3 +1,7 @@
+$(document).ready(function(){
+
+	svg4everybody({});
+
 //custom select
 
 function customSelectInit () {
@@ -28,46 +32,47 @@ customSelectInit();
 
 // info - tabs
 
-$('.info__open').on('click', function(){
+$(document).on('click','.info__open', function(){
 	$(this).parents('.info__item').find('.info__btn').toggleClass('info__btn_open');
 	$(this).parents('.info__item').find('.info__content').slideToggle();
 });
 
 //slider
 
-var slider = document.getElementById('range_mileage');
+var doubleLabels = [
 
-noUiSlider.create(slider, {
-	start: 0,
-	connect: [true, false],
-	step: 15000,
-	range: {
-		'min': 15000,
-		// '30 000': 20,
-		// '45 000': 30,
-		// '60 000': 40,
-		// '75 000': 50,
-		// '90 000': 60,
-		// '105 000': 70,
-		// '120 000': 80,
-		// '135 000': 90,
-		'max': 150000
-	}
+    "<i>15 000</i><span>1 год</span>",
+    "<i>30 000</i><span>2 года</span>",
+    "<i>45 000</i><span>3 года</span>",
+    "<i>60 000</i><span>4 года</span>",
+    "<i>75 000</i><span>5 лет</span>",
+	"<i>90 000</i><span>6 лет</span>",
+	"<i>105 000</i><span>7 лет</span>",
+	"<i>120 000</i><span>8 лет</span>",
+	"<i>135 000</i><span>9 лет</span>",
+	"<i>150 000</i><span>10 лет</span>"
 
-});
+];
 
+$("#range_mileage")
+    .slider({
+        max: 9,
+        min: 0,
+        value: 0,
+        animate: 400,
+		range: "min",
 
+		change: function(event, ui) {
+			$('#mileage_chosen .chosen-single span').html($("#mileage option[value=" + $('#range_mileage').slider('value') + "]").html());
+		}
+    })
+    .slider("pips", {
+        rest: "label",
+        labels: doubleLabels
+    });
 
-slider.noUiSlider.on('update', function( values, handle ) {
-	var value_slider =  slider.noUiSlider.get();
-	// alert(typeof(value_slider));
+	$(document).on('change','#mileage', function(){
+		$('#range_mileage').slider('value',this.value);
+	});
 
-	// var v = 'v' + value_slider;
-	// var value_s = String(value_slider);
-	// alert(value_s);
-	// if ($('#mileage').val() == value_slider) {
-	// 	$(this).attr("selected", "selected");
-	// }
-	$("#mileage option[value=" + String(slider.noUiSlider.get()) + "]").attr("selected", "selected");
-
-});
+})
