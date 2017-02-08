@@ -1,11 +1,56 @@
 .form__label {
 	font-family: 'vwtextoffice-bold';
 	@include font-param(16px, 16px, 700);
-	padding-bottom: 5px;
+	padding-bottom: 10px;
+
+	&_checkbox {
+		position: relative;
+		padding-bottom: 0;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 4px;
+			left: 109%;
+			@include size(30px);
+			border: 1px solid #dee1e3;
+			border-radius: 4px;
+			background-color: $white;
+			cursor: pointer;
+		}
+
+	}
+}
+
+.form__tick {
+	float: right;
+}
+
+
+.form__checkbox:checked ~ .form__tick {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 4px;
+	left: 109%;
+	@include size(32px);
+	border-radius: 4px;
+	background-color: $blue;
+}
+
+.form__checkbox:checked ~ .form__tick::after {
+	content: '';
+	position: absolute;
+	top: 8px;
+	left: 6px;
+	@include size(16px, 7px);
+	border-bottom: 3px solid $white;
+	border-left: 3px solid $white;
+	transform: rotate(-45deg);
 }
 
 .form__select {
-	width: 280px !important;
+	width: 100% !important;
 
 	.chosen-container-single .chosen-single {
 		@include font-param(14px, 16px, 400);
@@ -19,6 +64,10 @@
 
 .form__cell {
 	margin-bottom: 20px;
+}
+
+.form__checkbox {
+	display: none;
 }
 
 
@@ -36,5 +85,11 @@
 		}
 
 	}
+
+	.form__label_checkbox::before,
+	.form__checkbox:checked ~ .form__tick {
+		left: 355%;
+	}
+
 
 }

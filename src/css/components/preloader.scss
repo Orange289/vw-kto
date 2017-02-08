@@ -1,0 +1,7 @@
+.preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	@include size(100%);
+	z-index: 2000;
+}

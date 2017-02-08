@@ -1,6 +1,4 @@
-$(document).ready(function(){
-
-	svg4everybody({});
+svg4everybody({});
 
 //custom select
 
@@ -35,22 +33,23 @@ customSelectInit();
 $(document).on('click','.info__open', function(){
 	$(this).parents('.info__item').find('.info__btn').toggleClass('info__btn_open');
 	$(this).parents('.info__item').find('.info__content').slideToggle();
+	$('.info__footnotes').addClass('info__footnotes_open');
 });
 
 //slider
 
 var doubleLabels = [
 
-    "<i>15 000</i><span>1 год</span>",
-    "<i>30 000</i><span>2 года</span>",
-    "<i>45 000</i><span>3 года</span>",
-    "<i>60 000</i><span>4 года</span>",
-    "<i>75 000</i><span>5 лет</span>",
-	"<i>90 000</i><span>6 лет</span>",
-	"<i>105 000</i><span>7 лет</span>",
-	"<i>120 000</i><span>8 лет</span>",
-	"<i>135 000</i><span>9 лет</span>",
-	"<i>150 000</i><span>10 лет</span>"
+    "<i>15 000 км</i><span>1 год</span>",
+    "<i>30 000 км</i><span>2 года</span>",
+    "<i>45 000 км</i><span>3 года</span>",
+    "<i>60 000 км</i><span>4 года</span>",
+    "<i>75 000 км</i><span>5 лет</span>",
+	"<i>90 000 км</i><span>6 лет</span>",
+	"<i>105 000 км</i><span>7 лет</span>",
+	"<i>120 000 км</i><span>8 лет</span>",
+	"<i>135 000 км</i><span>9 лет</span>",
+	"<i>150 000 км</i><span>10 лет</span>"
 
 ];
 
@@ -75,4 +74,69 @@ $("#range_mileage")
 		$('#range_mileage').slider('value',this.value);
 	});
 
-})
+
+//preloader
+
+// var target = document.getElementsByClassName('filters__img');
+
+
+;(function (factory) {
+
+        if ((typeof exports === 'undefined' ? 'undefined' : _typeof(exports)) == 'object') {
+            // CommonJS
+            factory(require('jquery'), require('spin.js'));
+        } else if (typeof define == 'function' && define.amd) {
+            // AMD, register as anonymous module
+            define(['jquery', 'spin'], factory);
+        } else {
+            // Browser globals
+            if (!window.Spinner) throw new Error('Spin.js not present');
+            factory(window.jQuery, window.Spinner);
+        }
+    })(function ($, Spinner) {
+
+        $.fn.spin = function (opts, color) {
+
+            return this.each(function () {
+                var $this = $(this),
+                    data = $this.data();
+
+                if (data.spinner) {
+                    data.spinner.stop();
+                    delete data.spinner;
+                }
+                if (opts !== false) {
+                    opts = $.extend({ color: color || $this.css('color') }, $.fn.spin.presets[opts] || opts);
+                    data.spinner = new Spinner(opts).spin(this);
+                }
+            });
+        };
+
+        $.fn.spin.presets = {
+            default: {
+                lines: 8// The number of lines to draw
+                , length: 0 // The length of each line
+                , width: 17 // The line thickness
+                , radius: 29 // The radius of the inner circle
+                , corners: .65 // Corner roundness (0..1)
+                , color: '#0099da' // #rgb or #rrggbb or array of colors
+                , opacity: 0.2 // Opacity of the lines
+                , speed: 1 // Rounds per second
+                , trail: 50 // Afterglow percentage
+            },
+            small: {
+                lines: 8// The number of lines to draw
+                , length: 0 // The length of each line
+                , width: 12 // The line thickness
+                , radius: 18 // The radius of the inner circle
+                , corners: .65 // Corner roundness (0..1)
+                , color: '#0099da' // #rgb or #rrggbb or array of colors
+                , opacity: 0.2 // Opacity of the lines
+                , speed: 1 // Rounds per second
+                , trail: 50 // Afterglow percentage
+            }
+        };
+    });
+
+	$('.js_spin').spin('default');
+	$('.js_spin_small').spin('small');

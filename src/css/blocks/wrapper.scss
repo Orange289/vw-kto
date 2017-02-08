@@ -1,13 +1,15 @@
 .wrapper {
-	width: 280px;
-	margin: 0 auto;
+	padding: 0 6%;
+	min-width: 290px;
 }
 
 @media ($wide-widths) {
 
 	.wrapper {
-		width: 885px;
+		padding: 0 13%;
+		margin: auto;
 		position: relative;
+		max-width: 885px;
 	}
 
 }

@@ -3,6 +3,9 @@
 		.info__item.info__item_labors
 			a.info__open#openlabors
 				b Регламентные работы
+				span.info__result-preprice 2700,00
+					svg.icons.icons__ruble.icons__gray
+						use(xlink:href='img/sprite.svg#i-ruble')
 				span.info__btn
 			.info__content#contentlabors
 				+ table-head(tableHead_1)
@@ -17,9 +20,14 @@
 				.info__result
 					b Стоимость работ, руб.
 					b.info__result-price 2 700,00
+						svg.icons.icons__ruble.icons__gray
+							use(xlink:href='img/sprite.svg#i-ruble')
 		.info__item.info__item_parts
 			a.info__open#openparts
 				b Запчасти
+				span.info__result-preprice 160,00
+					svg.icons.icons__ruble.icons__gray
+						use(xlink:href='img/sprite.svg#i-ruble')
 				span.info__btn
 			.info__content#contentparts
 				+ table-head(tableHead_2)
@@ -28,22 +36,69 @@
 				.info__result
 					b Стоимость материалов, руб.
 					b.info__result-price 160,00
+						svg.icons.icons__ruble.icons__gray
+							use(xlink:href='img/sprite.svg#i-ruble')
 		.info__item.info__item_extralabors
 			a.info__open#opena_extralabors
 				b Дополнительные работы
-				span 2 700,00 руб.
+				span.info__result-preprice 2700,00
+					svg.icons.icons__ruble.icons__gray
+						use(xlink:href='img/sprite.svg#i-ruble')
 				span.info__btn
 			.info__content#content_extralabors
+				+ table-head(tableHead_1)
+				.info__point
+					+ info-content-add(info_add_l_name_1)
+					+ info-content(info__add_l_1)
+				.info__point
+					+ info-content-add(info_add_l_name_2)
+					+ info-content(info__add_l_2)
+				.info__point
+					+ info-content-add(info_add_l_name_3)
+					+ info-content(info__add_l_3)
+				.info__result
+					b Стоимость работ, руб.
+					b.info__result-price 2 700,00
+						svg.icons.icons__ruble.icons__gray
+							use(xlink:href='img/sprite.svg#i-ruble')
 		.info__item.info__item_extraparts
 			a.info__open#opena_extraparts
 				b Дополнительные запчасти
-				span 160,00 руб.
+				span.info__result-preprice 160,00
+					svg.icons.icons__ruble.icons__gray
+						use(xlink:href='img/sprite.svg#i-ruble')
 				span.info__btn
 			.info__content#content_extraparts
+				+ table-head(tableHead_2)
+				.info__point
+					+ info-content-add(info_add_p_name_1)
+					+ info-content(info__add_p_1)
+				.info__point
+					+ info-content-add(info_add_p_name_2)
+					+ info-content(info__add_p_2)
+				.info__point
+					+ info-content-add(info_add_p_name_3)
+					+ info-content(info__add_p_3)
+				.info__result
+					b Стоимость материалов, руб.
+					b.info__result-price 160,00
+						svg.icons.icons__ruble.icons__gray
+							use(xlink:href='img/sprite.svg#i-ruble')
 	.info__total
 		.info__total-item
 			b.info__total-label Итоговая стоимость ТО, руб.
-			b.info__total-value 20 585,00 руб.
+			b.info__total-value
+				span.js_total 20 585,00
+				svg.icons.icons__ruble.icons__gray
+					use(xlink:href='img/sprite.svg#i-ruble')
 		.info__total-item.info__total-item_last
 			b.info__total-label Стоимость предыдущих ТО
-			b.info__total-value 135 585,00 руб.
+			b.info__total-value 135 585,00
+				svg.icons.icons__ruble.icons__gray
+					use(xlink:href='img/sprite.svg#i-ruble')
+			span.info__total-note (с учетом рекомендованных работ)
+	.info__footnotes
+		* При Регламентном обслуживании проверка фильтрующего элемента воздушного фильтра и свечей зажигания, при необходимости замена. <br>
+		** Колодки меняются по состоянию <br>
+		*** Полный объем тормозной системы узнавайте у дилеров <br>
+		**** Представленная на сайте информация, касающаяся рекомендованных розничных цен, спецификаций, нормативов и технических характеристик, носит информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса Российской Федерации. Для получения подробной информации, пожалуйста, обращайтесь к ближайшему официальному дилеру марки Volkswagen.

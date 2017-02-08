@@ -15,6 +15,22 @@ mixin table-head(array)
 
 mixin info-content(array)
 	each item in array
-		div(class='#{item.class}')
+		div(class='#{item.class} #{item.mod}')
 			span #{item.span}
-			b #{item.text}
+			if item.mod == 'info__col_cost'
+				b #{item.text}
+					svg.icons.icons__ruble.icons__gray
+						use(xlink:href='img/sprite.svg#i-ruble')
+			else
+				b #{item.text}
+
+mixin info-content-add(array)
+	.info__col.info__col_1.info__col_name
+		label.form__label.form__label_checkbox.info__label #{array.text}
+			span.info__note #{array.subtext}
+			if array.check == 1
+				input(type='checkbox' checked).form__checkbox
+				span.form__tick
+			else
+				input(type='checkbox').form__checkbox
+				span.form__tick

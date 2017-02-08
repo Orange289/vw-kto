@@ -4,11 +4,44 @@
 	&_extralabors,
 	&_extraparts {
 
-		span:first-of-type {
-			display: none;
+		.info__col {
+
+			&_name {
+				padding-bottom: 14px;
+				@include clearfix;
+
+			}
+
+			&_content {
+				span {
+					display: block;
+				}
+			}
+
 		}
 
 	}
+
+	.info__note {
+		display: block !important;
+		width: 185px;
+		font-family: 'vwtextoffice-regular',sans-serif;
+		@include font-param(15px, 20px, 400, #7c878e);
+		margin-top: 7px;
+		margin-bottom: 6px;
+	}
+
+}
+
+.info__result-preprice {
+	display: none;
+}
+
+.info__label {
+	width: 72%;
+	line-height: 1.53;
+	display: block;
+	cursor: pointer;
 }
 
 .info__open {
@@ -90,15 +123,17 @@
 		background-color: #f3f5f6;
 		padding-top: 22px;
 		padding-bottom: 23px;
+		@include clearfix;
 
-		b,
 		span {
 			display: inline-block;
 			vertical-align: top;
+			width: 66%;
 		}
 
-		span {
-			width: 184px;
+		b {
+			float: right;
+			margin-right: 17px;
 		}
 
 	}
@@ -109,18 +144,16 @@
 		padding-bottom: 11px;
 		@include clearfix;
 
-		b,
 		span {
 			float: left;
+			width: 164px;
 		}
 
 		b {
+			float: right;
 			font-weight: 400;
-		}
-
-		span {
-			margin-right: 19px;
-			width: 164px;
+			margin-right: 17px;
+			white-space: nowrap;
 		}
 
 	}
@@ -137,13 +170,12 @@
 
 	b {
 		float: left;
-		width: 145px;
 	}
 
 	.info__result-price {
 		float: right;
-		width: 57px;
 		margin-right: 17px;
+		white-space: nowrap;
 	}
 
 }
@@ -151,7 +183,15 @@
 .info__total {
 	padding-left: 24px;
 	padding-top: 17px;
-	padding-bottom: 76px;
+	padding-bottom: 30px;
+}
+
+.info__total-note {
+	display: block;
+	width: 129px;
+	font-family: 'vwtextoffice-regular',sans-serif;
+	@include font-param(14px, 18px, 400, #7c878e);
+	margin-top: 10px;
 }
 
 .info__total-item {
@@ -163,7 +203,6 @@
 	}
 
 	&_last {
-		color: #7c878e;
 		margin-top: 20px;
 	}
 
@@ -174,8 +213,55 @@
 	margin-right: 8px;
 }
 
+.info__total-value {
+	float: right;
+	margin-right: 17px;
+
+	.js_total {
+		@include font-param(15px, 15px, 400);
+		font-weight: 700;
+		white-space: nowrap;
+		float: left;
+		margin-right: 3px;
+	}
+
+}
+
+.info__footnotes {
+	@include font-param(14px,1.57,400, #808890);
+	margin-bottom: 70px;
+	display: none;
+
+	&_open {
+		display: block;
+	}
+
+}
+
 
 @media ($wide-widths) {
+
+	.info__result-preprice {
+		display: block;
+		float: right;
+
+		.icons__ruble {
+			width: .5em;
+			height: .5em;
+		}
+
+	}
+
+	.info__total-value {
+		float: right;
+		margin-right: 24px;
+
+		.icon__ruble {
+			width: .5em;
+			height: .5em;
+		}
+
+	}
 
 	.info__item {
 		border-bottom: 2px solid #bdc3c6;
@@ -215,6 +301,39 @@
 
 		.info__col {
 			@include font-param(16px, 25px, 400);
+			padding-left: 0;
+
+			&_1 {
+				width: 329px;
+				// width: 38.5%;
+			}
+
+			&_2 {
+				width: 179px;
+				// width: 21%;
+			}
+
+			&_3 {
+				width: 179px;
+				// width: 21%;
+			}
+
+			&_4 {
+				width: 157px;
+				// width: 18.3%;
+			}
+
+			&_2 span {
+				width: 102px;
+			}
+
+			&_3 span {
+				width: 85px;
+			}
+
+			&_4 span {
+				width: 80px;
+			}
 
 			span {
 				display: none;
@@ -224,6 +343,12 @@
 				display: inline-block;
 				vertical-align: top;
 				padding: 0;
+
+				b {
+					float: none;
+					margin-right: 0;
+				}
+
 			}
 
 			&_name {
@@ -231,6 +356,7 @@
 				vertical-align: top;
 				background-color: transparent;
 				padding: 0;
+				width: 38%;
 
 				span {
 					display: inline-block;
@@ -241,6 +367,24 @@
 					display: none;
 				}
 
+			}
+
+		}
+
+		.info__col_content {
+
+			&_1 {
+				width: 21%;
+			}
+
+			&_2 {
+				width: 21%;
+			}
+
+			&_3 {
+				b {
+					margin-left: -8%;
+				}
 			}
 
 		}
@@ -260,7 +404,6 @@
 			span {
 				@include font-param(16px, 24px, 700);
 				display: inline-block;
-
 			}
 
 		}
@@ -269,67 +412,12 @@
 
 	.info__point {
 		padding-left: 30px;
-		padding-top: 13px;
-		padding-bottom: 14px;
+		padding-top: 17px;
+		padding-bottom: 15px;
 	}
 
 	.info__item_labors,
-	.info__item_parts {
-
-		.info__head .info__col {
-
-			&_2 span {
-				width: 102px;
-			}
-
-			&_3 span {
-				width: 85px;
-			}
-
-			&_4 span {
-				width: 80px;
-			}
-
-		}
-
-		.info__col {
-			padding-left: 0;
-
-			&_1 {
-				width: 329px;
-			}
-
-			&_2 {
-				width: 179px;
-			}
-
-			&_3 {
-				width: 179px;
-			}
-
-			&_4 {
-				width: 157px;
-			}
-
-		}
-
-		.info__point {
-
-			.info__col_3 b {
-				float: right;
-				margin-right: 106px;
-			}
-
-			.info__col_4 b {
-				float: right;
-				margin-right: 90px;
-			}
-
-		}
-
-	}
-
-	.info__item_labors {
+	.info__item_extralabors{
 
 		.info__point:nth-child(odd) {
 			background-color: #f3f5f6;
@@ -337,13 +425,28 @@
 
 	}
 
+	.info__item_parts,
+	.info__item_extraparts{
+
+		.info__point:nth-child(even) {
+			background-color: #f3f5f6;
+		}
+
+	}
+
+	.info__label {
+		width: 69%;
+		font-family: 'vwtextoffice-regular',sans-serif;
+		font-weight: 400;
+	}
+
 	.info__result {
 		font-size: 16px;
 		border-bottom: none;
 		padding-left: 30px;
 		padding-right: 90px;
-		padding-top: 18px;
-		padding-bottom: 19px;
+		padding-top: 24px;
+		padding-bottom: 24px;
 
 		b {
 			width: 210px;
@@ -358,9 +461,8 @@
 	}
 
 	.info__total {
-		padding-left: 74px;
+		padding-left: 8%;
 		padding-top: 29px;
-		padding-bottom: 85px;
 
 		b {
 			font-size: 24px;
@@ -369,18 +471,29 @@
 
 		.info__total-item_last {
 			margin-top: 35px;
-
-			b {
-				font-weight: 400;
-			}
-
 		}
 
 	}
 
+	.info__total span {
+		width: 280px;
+		font-size: 16px;
+		margin-top: 12px;
+	}
+
 	.info__total-label {
 		width: 309px;
-		margin-right: 322px;
+	}
+
+	.info__total-value {
+
+		.js_total {
+			font-size: 24px;
+			font-weight: 700;
+			float: none;
+			margin-right: 0;
+		}
+
 	}
 
 }

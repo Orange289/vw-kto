@@ -1,0 +1,18 @@
+.icons__ruble {
+	width: .7em;
+	height: .7em;
+}
+
+.icons__gray {
+	fill: $graytext;
+}
+
+
+@media ($wide-widths) {
+
+	.icons__ruble {
+		width: .55em;
+		height: .55em;
+	}
+
+}
